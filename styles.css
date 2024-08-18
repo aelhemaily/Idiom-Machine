@@ -1,0 +1,234 @@
+/* General Styles */
+html, body {
+    height: 100%; /* Ensure html and body take full height */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e37b070;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #28032f1b;
+    color: #ecf0f1;
+    z-index: 1; /* Ensures header is above bubbles */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 150px); /* Adjust height to fit within viewport */
+    position: relative;
+    z-index: 2; /* Ensure content box is above bubbles */
+   
+}
+
+.central-box {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.language-selection {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.flag {
+    text-align: center;
+    cursor: pointer;
+}
+
+.flag img {
+    width: 100px;
+    height: 60px;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flag p {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.start-button {
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin: 1rem auto 0;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #c0392b;
+}
+
+/* Bubbles Styles */
+#bubbles-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full viewport height */
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0; /* Ensure bubbles are below header and central box */
+}
+
+.bubble {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border: 2px solid #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3498db;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+    text-align: center;
+    z-index: 1;
+}
+
+.bubble span {
+    font-size: 0.9rem;
+}
+
+/* Keyframes for bubble floating */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh); /* Move bubble up and out of view */
+        opacity: 0;
+    }
+}
+.flag {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flag img {
+    width: 100px;
+    height: 60px;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flag.selected {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.start-button {
+    display: block;
+    width: 150px;
+    height: 50px;
+    margin: 1rem auto 0;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #c0392b;
+}
+
+
+/* Responsiveness */
+@media (max-width: 600px) {
+ 
+
+    .flag img {
+       
+        width: 20px;
+        height: 18px;
+    }
+
+
+    .start-button {
+        width: 120px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .bubble {
+        width: 80px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .language-selection {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        justify-content: center;
+    }
+    
+    .flag {
+        text-align: center;
+    }
+    
+    .flag img {
+        width: 50px;
+        height: auto;
+    }
+    .flag p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 1441px)
+{
+    header h1 {
+        font-size: 40px;
+    }
+
+    header h2 {
+        font-weight: 700;
+    }
+}
