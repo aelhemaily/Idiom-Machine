@@ -168,9 +168,9 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             
             {
-                idiom: "خربها و قعد علا تلها",
+                idiom: "خربها و قعد على تلها",
                 literalTranslation: "He ruined it and sat on top of its hill/debris.",
-                meaning: "Said of omeone who causes trouble or damage and then sits back and enjoys the result or remains indifferent to the consequences.",
+                meaning: "Said of someone who causes trouble or damage and then sits back and enjoys the result or remains indifferent to the consequences.",
                 backgroundPath: "images/ar/hill.png"
             },
 
@@ -1184,7 +1184,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 idiom: "Eine Schwalbe macht noch keinen Sommer",
                 literalTranslation: "One swallow does not yet make a summer.",
                 meaning: "One positive sign or event does not mean the situation isresolved or 'we are still a long ways away'.",
-                backgroundPath: "images/de/fur.png"
+                backgroundPath: "images/de/swallow.png"
             },
 
             {
