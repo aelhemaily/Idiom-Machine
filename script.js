@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
         'ثقة', 'حرية', 'إبداع', 'تعاون', 'نجاح', 'تفاؤل', 'طموح', 'حياة', 'أمل', 'تحدي', 
         'صبر', 'فرح', 'جمال', 'حلم', 'كرم', 'صحة', 'شجاعة', 'كرامة', 'حرية', 'سلام', 
         'تقدير', 'فرصة', 'صدق', 'إيمان', 'رحمة', 'حب', 'عطاء', 'تجربة', 'سفر', 'عائلة',
-    
+
         // Spanish
         'Hola', 'Gracias', 'Amor', 'Esperanza', 'Felicidad', 'Amistad', 'Fuerza', 'Paz', 'Confianza', 
         'Libertad', 'Creatividad', 'Colaboración', 'Éxito', 'Optimismo', 'Ambición', 'Vida', 'Desafío', 
         'Paciencia', 'Alegría', 'Belleza', 'Sueño', 'Generosidad', 'Salud', 'Valor', 'Dignidad', 
         'Apreciación', 'Oportunidad', 'Sinceridad', 'Fe', 'Compasión', 'Donar', 'Experiencia', 
         'Viajar', 'Familia', 'Saber', 'Respeto', 'Gratitud',
-    
+
         // German
         'Hallo', 'Danke', 'Liebe', 'Hoffnung', 'Freude', 'Freundschaft', 'Kraft', 'Frieden', 
         'Vertrauen', 'Freiheit', 'Kreativität', 'Erfolg', 'Optimismus', 
@@ -20,28 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
         'Großzügigkeit', 'Gesundheit', 'Mut', 'Würde', 'Wertschätzung', 'Chance', 'Ehrlichkeit', 
         'Glaube', 'Mitgefühl', 'Schenken', 'Erfahrung', 'Reisen', 'Familie', 'Wissen', 
         'Respekt', 'Dankbarkeit',
-    
-      //Turkish
 
+        // Turkish
         'Selam', 'Merhaba', 'Aşk', 'Umut', 'Dostluk', 'Mutluluk', 'Hüzün', 'Güç', 'Barış',
         'Güven', 'Özgürlük', 'İşbirliği', 'Başarı', 'İyimserlik', 'Hırs', 'Hayat', 'Umut', 'Meydan okuma',
         'Sabır', 'Sevinç', 'Güzellik', 'Rüya', 'Cömertlik', 'Sağlık', 'Cesaret', 'Onur', 'Özgürlük', 'Barış',
         'Takdir', 'Fırsat', 'Dürüstlük', 'İnanç', 'Merhamet', 'Aşk', 'Verme', 'Deneyim', 'Seyahat', 'Aile',
 
-        //Swedish
+        // Swedish
         'Hej', 'Kärlek', 'Hopp', 'Vänskap', 'Lycka', 'Sorg', 'Styrka', 'Fred',
         'Förtroende', 'Frihet', 'Kreativitet', 'Samarbete', 'Framgång', 'Optimism', 'Ambition', 'Liv', 'Hopp', 'Utmaning',
         'Tålamod', 'Glädje', 'Skönhet', 'Dröm', 'Generositet', 'Hälsa', 'Mod', 'Ära', 'Frihet', 'Fred',
         'Möjlighet', 'Ärlighet', 'Tro', 'Kärlek', 'Att ge', 'Erfarenhet', 'Resa', 'Familj',
 
-        //French 
+        // French 
         'Salut', 'Bonjour', 'Amour', 'Espoir', 'Amitié', 'Bonheur', 'Tristesse', 'Force', 'Paix',
         'Confiance', 'Liberté', 'Créativité', 'Succès', 'Optimisme', 'Ambition', 'Vie', 'Espoir', 'Défi',
         'Patience', 'Joie', 'Beauté', 'Rêve', 'Générosité', 'Santé', 'Courage', 'Honneur', 'Liberté', 'Paix',
         'Opportunité', 'Honnêteté', 'Foi', 'Miséricorde', 'Amour', 'Donner', 'Expérience', 'Voyage', 'Famille'
-
     ];
-    
 
     const container = document.getElementById('bubbles-container');
     const bubbles = []; // Array to store bubble elements
@@ -108,11 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(() => {
         createBubble(words[Math.floor(Math.random() * words.length)]);
-    }, 1200); // Create a new bubble every 0.5 seconds
+    }, 1200); // Create a new bubble every 1.2 seconds
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const flags = document.querySelectorAll('.flag');
     const startButton = document.querySelector('.start-button');
+    const errorMessage = document.getElementById('error-message');
     let selectedLanguage = null;
 
     flags.forEach(flag => {
@@ -131,7 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('selectedLanguage', selectedLanguage);
             window.location.href = 'idiom.html'; // Redirect to the idiom template page
         } else {
-            alert('Please select a language first.');
+            errorMessage.textContent = 'Please select a language first.';
+            errorMessage.style.display = 'block'; // Show the error message
         }
     });
 });
