@@ -1,124 +1,401 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
 body {
     background-color: #214ba56b; /* Default background color */
-  background-image: url('images/bg.png');
-  background-size: cover;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-
-.background-box {
-    position: relative;
-    background-size: contain;
+    background-image: url('images/bg.png');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 15px;
-    padding: 2rem;
-    width: 95%;
-    height:95%;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: hidden; /* Ensure rounded corners */
-    border-radius: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
+/* Container Styles */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Box Styles */
+.background-box {
+    flex: 1;
+    background-image: url('images/your-image.png'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Idiom Content Styles */
 .idiom-content {
-    position: relative;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 15px;
-    max-width: 38%;
-    text-align: center;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.8), /* Black shadow for depth */
+    -1px -1px 2px rgba(0, 0, 0, 0.8), 
+    1px -1px 2px rgba(0, 0, 0, 0.8), 
+    -1px 1px 2px rgba(0, 0, 0, 0.8), 
+    0 0 5px #fff; /* White border effect */
+}
+#idiom-title {
+
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.8), /* Black shadow for depth */
+        -1px -1px 2px rgba(0, 0, 0, 0.8), 
+        1px -1px 2px rgba(0, 0, 0, 0.8), 
+        -1px 1px 2px rgba(0, 0, 0, 0.8), 
+        0 0 5px #fff; /* White border effect */
 }
 
+/* Heading Styles */
 .idiom-content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #e74c3c;
+}
+
+/* Paragraph Styles */
+.idiom-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
     margin-bottom: 1rem;
 }
 
-.idiom-content p {
-    font-size: 1.6rem;
-    margin: 0.5rem 0;
-}
-
+/* Label Styles */
 .literal-translation-label,
 .meaning-label {
     font-weight: bold;
-    color: #e74c3c; /* Highlight color */
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    color: #f1c40f;
 }
 
+/* Translation and Meaning Text Styles */
 .literal-translation,
 .meaning {
-    background: rgba(255, 255, 255, 0.8); /* Light background to stand out */
-    color: #333; /* Darker text color for better contrast */
-    padding: 0.5rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    color: #ecf0f1;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Button Styles */
 .next-button {
     margin-top: 2rem;
-    padding: 0.5rem 1rem;
-    font-size: 2.2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
     color: #fff;
-    background-color: #752d25;
-    
+    background-color: #e74c3c;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: center;
 }
 
 .next-button:hover {
-    background-color: #e74c3c;
+    background-color: #c0392b;
+    transform: translateY(-3px);
 }
 
-.literal-translation-label, .meaning-label {
-    color: rgba(215, 199, 199, 0.881);
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .background-box,
+    .idiom-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .background-box {
+        height: 300px;
+    }
+
+    .idiom-content h1 {
+        font-size: 2rem;
+    }
+
+    .idiom-content p {
+        font-size: 1.1rem;
+    }
+
+    .literal-translation-label,
+    .meaning-label {
+        font-size: 1.2rem;
+    }
+
+    .next-button {
+        font-size: 1.3rem;
+        padding: 0.5rem 1rem;
+    }
+    #idiom-title {
+        text-shadow: none;
+    }
 }
 
 @media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    #idiom-title {
+        text-shadow: none;
+    }
+    .background-box {
+        height: 200px;
+    }
+
+    .idiom-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .idiom-content p {
+        font-size: 1rem;
+    }
+
+    .literal-translation-label,
+    .meaning-label {
+        font-size: 1rem;
+    }
+
+    .next-button {
+        font-size: 1.1rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 900px) {
+    body {
+        overflow: hidden; /* Hide scrollbars */
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        gap: 1rem;
+        position: relative; /* Ensure container is relative for absolute positioning */
+        background: none; /* Ensure no background is interfering */
+    }
+
+    .background-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1; /* Place it behind the content */
+    }
 
     .idiom-content {
         position: relative;
-        background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+        max-width: 90%;
         padding: 2rem;
-        border-radius: 15px;
-        max-width: 88%;
-        text-align: center;
-        color: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        
-    }
-    .idiom-content h1 {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-    
-    .idiom-content p {
-        font-size: 1rem;
-        margin: 0.5rem 0;
-    }
-    
-    .literal-translation-label,
-    .meaning-label {
-        font-weight: bold;
-       
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        background: none; /* Remove background to make it fully transparent */
+        border: none; /* Remove border to ensure no box effect */
+        color: #fff; /* Ensure text color is white for contrast */
+        box-shadow: none; /* Remove any shadow to avoid blurring */
+        z-index: 1; /* Ensure it appears above the background */
+        /* No border, box-shadow, or background effect applied */
     }
 
+    .idiom-content h1,
+    .idiom-content p,
+    .literal-translation-label,
+    .meaning-label {
+        /* Ensure readability with text color */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+    }
+
+    .next-button {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
 }
+
+@media (max-width: 600px) {
+    .background-box {
+        height: 100vh; /* Full viewport height */
+    }
+
+    .idiom-content {
+        padding: 1.5rem;
+        max-width: 95%;
+        font-size: 0.9rem; /* Adjust font size for small screens */
+        backdrop-filter: none;
+    }
+
+    .idiom-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .idiom-content p {
+        font-size: 0.9rem;
+    }
+
+    .literal-translation-label,
+    .meaning-label {
+        font-size: 0.9rem;
+    }
+
+    .next-button {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 600px) {
+    .background-box {
+        height: 100vh; /* Full viewport height */
+    }
+
+    .idiom-content {
+        padding: 1.5rem;
+        max-width: 95%;
+        font-size: 1rem; /* Adjust font size for better readability */
+        background: none; /* Ensure no background effect on the box itself */
+    }
+
+    .idiom-content h1,
+    .idiom-content p,
+    .literal-translation-label,
+    .meaning-label {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Ensure readability with text shadow */
+    }
+
+    .idiom-content h1 {
+        font-size: 1.8rem; /* Slightly increased font size */
+        background: rgba(255, 255, 255, 0.6); /* Light white background with slight transparency */
+        color: #000; /* Black text for contrast */
+        padding: 0.5rem;
+        border-radius: 5px; /* Rounded corners for better aesthetics */
+        border: 1px solid #000; /* Black border */
+    }
+
+    .idiom-content p,
+    .literal-translation-label,
+    .meaning-label {
+        font-size: 1.2rem; /* Slightly increased font size */
+        background: rgba(255, 255, 255, 0.6); /* Light white background with slight transparency */
+        color: #000; /* Black text for contrast */
+        padding: 0.5rem;
+        border-radius: 5px; /* Rounded corners for better aesthetics */
+        border: 1px solid #000; /* Black border */
+    }
+
+    .next-button {
+        font-size: 3rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    
+#idiom-title {
+
+    text-shadow: 
+       none;
+}
+
+}
+
+
+
+
+
+
+
+@media (min-width: 1922px) {
+    .container {
+        max-width: 3400vh;
+        height: 75vh;
+        width: 180vh;
+    }
+
+    .background-box {
+        max-width: 3400vh;
+        height: 70vh;
+        width: 170vh;
+    }
+
+    .idiom-content {
+        max-width: 3400vh;
+        height: 70vh;
+        width: 170vh;
+        font-size: 2.2rem; /* Increase text size */
+        text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.8), /* Black shadow for depth */
+        -1px -1px 2px rgba(0, 0, 0, 0.8), 
+        1px -1px 2px rgba(0, 0, 0, 0.8), 
+        -1px 1px 2px rgba(0, 0, 0, 0.8), 
+        0 0 5px #fff; /* White border effect */
+    }
+
+    .idiom-content h1 {
+        font-size: 3rem; /* Bigger heading */
+        margin-bottom: 1.5rem;
+    }
+
+    .idiom-content p {
+        font-size: 2rem; /* Bigger paragraph text */
+        margin: 1rem 0;
+    }
+
+    .literal-translation-label,
+    .meaning-label {
+        font-size: 1.8rem; /* Bigger labels */
+        margin-bottom: 0.75rem;
+    }
+
+    .literal-translation,
+    .meaning {
+        font-size: 1.5rem; /* Bigger text */
+    }
+
+    .next-button {
+        font-size: 3rem; /* Larger button text */
+        padding: 0.75rem 1.5rem; /* Larger button size */
+    }
+}
+
+
