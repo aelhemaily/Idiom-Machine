@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // German
         'Hallo', 'Danke', 'Liebe', 'Hoffnung', 'Freude', 'Freundschaft', 'Kraft', 'Frieden', 
-        'Vertrauen', 'Freiheit', 'Kreativität', 'Zusammenarbeit', 'Erfolg', 'Optimismus', 
-        'Ambition', 'Leben', 'Herausforderung', 'Geduld', 'Glück', 'Schönheit', 'Traum', 
+        'Vertrauen', 'Freiheit', 'Kreativität', 'Erfolg', 'Optimismus', 
+        'Ambition', 'Leben', 'Geduld', 'Glück', 'Schönheit', 'Traum', 
         'Großzügigkeit', 'Gesundheit', 'Mut', 'Würde', 'Wertschätzung', 'Chance', 'Ehrlichkeit', 
         'Glaube', 'Mitgefühl', 'Schenken', 'Erfahrung', 'Reisen', 'Familie', 'Wissen', 
         'Respekt', 'Dankbarkeit',
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       //Turkish
 
         'Selam', 'Merhaba', 'Aşk', 'Umut', 'Dostluk', 'Mutluluk', 'Hüzün', 'Güç', 'Barış',
-        'Güven', 'Özgürlük', 'Yaratıcılık', 'İşbirliği', 'Başarı', 'İyimserlik', 'Hırs', 'Hayat', 'Umut', 'Meydan okuma',
+        'Güven', 'Özgürlük', 'İşbirliği', 'Başarı', 'İyimserlik', 'Hırs', 'Hayat', 'Umut', 'Meydan okuma',
         'Sabır', 'Sevinç', 'Güzellik', 'Rüya', 'Cömertlik', 'Sağlık', 'Cesaret', 'Onur', 'Özgürlük', 'Barış',
         'Takdir', 'Fırsat', 'Dürüstlük', 'İnanç', 'Merhamet', 'Aşk', 'Verme', 'Deneyim', 'Seyahat', 'Aile',
 
@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'Hej', 'Kärlek', 'Hopp', 'Vänskap', 'Lycka', 'Sorg', 'Styrka', 'Fred',
         'Förtroende', 'Frihet', 'Kreativitet', 'Samarbete', 'Framgång', 'Optimism', 'Ambition', 'Liv', 'Hopp', 'Utmaning',
         'Tålamod', 'Glädje', 'Skönhet', 'Dröm', 'Generositet', 'Hälsa', 'Mod', 'Ära', 'Frihet', 'Fred',
-        'Uppskattning', 'Möjlighet', 'Ärlighet', 'Tro', 'Barmhärtighet', 'Kärlek', 'Att ge', 'Erfarenhet', 'Resa', 'Familj',
+        'Möjlighet', 'Ärlighet', 'Tro', 'Kärlek', 'Att ge', 'Erfarenhet', 'Resa', 'Familj',
 
         //French 
         'Salut', 'Bonjour', 'Amour', 'Espoir', 'Amitié', 'Bonheur', 'Tristesse', 'Force', 'Paix',
-        'Confiance', 'Liberté', 'Créativité', 'Collaboration', 'Succès', 'Optimisme', 'Ambition', 'Vie', 'Espoir', 'Défi',
+        'Confiance', 'Liberté', 'Créativité', 'Succès', 'Optimisme', 'Ambition', 'Vie', 'Espoir', 'Défi',
         'Patience', 'Joie', 'Beauté', 'Rêve', 'Générosité', 'Santé', 'Courage', 'Honneur', 'Liberté', 'Paix',
-        'Appréciation', 'Opportunité', 'Honnêteté', 'Foi', 'Miséricorde', 'Amour', 'Donner', 'Expérience', 'Voyage', 'Famille'
+        'Opportunité', 'Honnêteté', 'Foi', 'Miséricorde', 'Amour', 'Donner', 'Expérience', 'Voyage', 'Famille'
 
     ];
     
